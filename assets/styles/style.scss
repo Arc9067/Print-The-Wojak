@@ -1,0 +1,197 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&family=Volkhov:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: "Otaku Rant";
+  src: url(../Otaku\ Rant\ Bold.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #f8c74b;
+  --body-bg: #a6c8eb;
+  /*===== typography =====*/
+  --body-font: "Volkhov", serif;
+  --Otaku: "Otaku Rant";
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --black: #000;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font), serif;
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  background: var(--body-bg);
+  color: var(--black);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.button {
+  display: block;
+  width: max-content;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img:not(.nav-logo, .no) {
+  margin-inline: auto;
+}
+
+/*===== CLASS CSS ===== */
+
+a.nav-logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+header {
+  width: 100%;
+  padding-block: 15px;
+  position: absolute;
+  top: 0;
+
+  nav.container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+
+    a.nav-logo {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+      color: #000000;
+    }
+    a.nav-btn {
+      padding: 16px 32px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #ffffff;
+      background: #000000;
+      box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+    }
+    a.nav-btn:hover {
+      background-color: transparent;
+      color: var(--black);
+      box-shadow: none;
+    }
+  }
+}
+
+#hero {
+  width: 100vw;
+  padding-block: 150px;
+  overflow-x: hidden;
+
+  img {
+    max-width: 35rem;
+    animation: scale-animation 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes scale-animation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
+  h1.title {
+    font-family: "Rammetto One", cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 140%;
+    color: #000000;
+
+    @media (max-width: 700px) {
+      font-size: 32px;
+      line-height: 140%;
+      /* or 45px */
+
+      text-align: center;
+    }
+  }
+  a.buy-btn {
+    padding: 16px 32px;
+    background-color: var(--black);
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+}
+
+footer {
+  width: 100%;
+  padding-block: 20px;
+
+  img.footer {
+    max-width: 4rem;
+  }
+}
