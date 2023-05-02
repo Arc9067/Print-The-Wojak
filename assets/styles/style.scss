@@ -175,6 +175,7 @@ header {
       text-align: center;
     }
   }
+
   a.buy-btn {
     padding: 16px 32px;
     background-color: var(--black);
@@ -184,6 +185,26 @@ header {
     font-size: 16px;
     line-height: 140%;
     color: #ffffff;
+  }
+}
+
+#tk {
+  width: 100%;
+  padding-block: 50px;
+
+  h2.title {
+    font-family: "Rammetto One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 170%;
+
+    text-align: center;
+
+    @media (max-width: 700px) {
+      font-size: 40px;
+      line-height: 170%;
+    }
   }
 }
 
